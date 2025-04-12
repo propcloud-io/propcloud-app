@@ -1,5 +1,5 @@
-import { ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 /**
  * Combines class names with Tailwind CSS classes
@@ -12,10 +12,10 @@ export function cn(...inputs: ClassValue[]) {
  * Format a date to a readable string
  */
 export function formatDate(date: Date): string {
-  return new Intl.DateTimeFormat('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
   }).format(date);
 }
 
@@ -26,7 +26,7 @@ export function truncateString(str: string, num: number): string {
   if (str.length <= num) {
     return str;
   }
-  return str.slice(0, num) + '...';
+  return str.slice(0, num) + "...";
 }
 
 /**
